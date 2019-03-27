@@ -1,24 +1,25 @@
 class MonstersController < ApplicationController
 
- def index
+  def index
+    @monsters = Monster.all
+  end
 
- end
- def show
+  def show
+  end
 
- end
+  def new
+    @monster = Monster.new
+  end
 
- def new
-   @monster = Monster.new
- end
- def create
-     @monster = Monster.new(text: params[:text])
-     @monster.save
-     redirect_to("/monsters/index")
- end
- def edit
+  def create
+    @monster = Monster.new(text: params[:text])
+    @monster.save
+    redirect_to("/monsters/index")
+  end
 
- end
- def destroy
+  def edit
+  end
 
- end
+  def destroy
+  end
 end
