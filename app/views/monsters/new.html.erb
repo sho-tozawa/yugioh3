@@ -6,11 +6,23 @@
 </head>
 <body>
 
-<%=form_tag("/monsters/create")do %>
-  <input name="text" class="input-name">
-  <input name="level" class="input-level">
-  <input type="submit" value="作成">
+<%= form_with(model: @monster, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.text_field :level %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>
+
 
 </body>
 </html>

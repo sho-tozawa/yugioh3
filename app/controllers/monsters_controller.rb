@@ -6,6 +6,10 @@ class MonstersController < ApplicationController
  def show
 
  end
+
+ def new
+   @monster = Monster.new
+ end
  def create
      @monster = Monster.new(text: params[:text])
      @monster.save
