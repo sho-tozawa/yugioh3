@@ -12,7 +12,10 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-
+```
+rails db:create
+rails db:migrate
+```
 * Database initialization
 
 * How to run the test suite
