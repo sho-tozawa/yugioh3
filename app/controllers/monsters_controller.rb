@@ -5,7 +5,10 @@ class MonstersController < ApplicationController
   end
 
   def show
+  end
 
+  def new
+    @monster = Monster.new
   end
 
   def create
@@ -15,10 +18,8 @@ class MonstersController < ApplicationController
   end
 
   def edit
-
   end
 
   def destroy
-
   end
 end
