@@ -12,9 +12,9 @@ class MonstersController < ApplicationController
   end
 
   def create
-    @monster = Monster.new(text: params[:text])
+    @monster = Monster.new(monster_params)
     @monster.save
-    redirect_to("/monsters/index")
+    redirect_to(monsters_path)
   end
 
   def edit
@@ -22,4 +22,11 @@ class MonstersController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def monster_params
+    params.require(:monster).permit(:name, :level)
+  end
+
 end

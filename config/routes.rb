@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'top' => 'home#top'
   get 'monsters' => 'monsters#index'
   get 'monsters/new' => 'monsters#new'
-  post 'monsters/create' => 'monsters#create'
+  post 'monsters' => 'monsters#create'
 
   get 'monsters/:id' => 'monsters#show'
 
