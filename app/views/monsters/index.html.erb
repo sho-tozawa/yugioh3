@@ -7,7 +7,7 @@
 <body>
 
 <% @monsters.each do |monster| %>
-  <%= monster.name %>
+  <%= link_to(monster.name,"/monsters/#{monster.id}") %>
   <%= monster.level %>
 <% end %>
 

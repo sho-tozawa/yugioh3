@@ -5,6 +5,7 @@ class MonstersController < ApplicationController
   end
 
   def show
+    @monster = Monster.find_by(id:params[:id])
   end
 
   def new
