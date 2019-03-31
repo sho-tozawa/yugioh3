@@ -8,6 +8,8 @@
 
 <h1><%= @monster.name %></h1>
 <h1>Level.<%= @monster.level %></h1>
+<%= link_to("編集", "/monsters/#{@monster.id}/edit") %>
+<%= link_to("削除", "/monsters/#{@monster.id}/destroy", {method: "post"}) %>
 
 
 </body>

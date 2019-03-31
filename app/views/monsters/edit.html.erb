@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<%= form_tag("/monsters/#{@monster.id}/update") do %>
+
+  <input name="name" class="monsters_name" value="<%= @monster.name %>">
+  <input name="level" class="monsters_level" value="<%= @monster.level %>">
+  <input type="submit" value="保存">
+
+<% end %>
+</body>
+</html>

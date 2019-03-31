@@ -5,7 +5,7 @@ class MonstersController < ApplicationController
   end
 
   def show
-    @monster = Monster.find_by(id:params[:id])
+    @monster = Monster.find_by(id: params[:id])
   end
 
   def new
@@ -19,9 +19,22 @@ class MonstersController < ApplicationController
   end
 
   def edit
+    @monster = Monster.find_by(id: params[:id])
+  end
+
+  def update
+    @monster = Monster.find_by(id: params[:id])
+    @monster.name = params[:name]
+    @monster.level = params[:level]
+    @monster.save
+    redirect_to("/monsters")
   end
 
   def destroy
+    @monster = Monster.find_by(id: params[:id])
+    @monster.destroy
+    redirect_to("/monsters")
+
   end
 
   private
