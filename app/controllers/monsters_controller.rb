@@ -5,7 +5,7 @@ class MonstersController < ApplicationController
   end
 
   def show
-    @monster = Monster.find_by(id: params[:id])
+    @monster = Monster.find(params[:id])
   end
 
   def new
@@ -19,7 +19,7 @@ class MonstersController < ApplicationController
   end
 
   def edit
-    @monster = Monster.find_by(id: params[:id])
+    @monster = Monster.find(params[:id])
   end
 
   def update
