@@ -8,7 +8,8 @@
 <ul>
   <li><%= @monster.name %></li>
   <li>Level.<%= @monster.level %></li>
-  <li>攻撃力：<%= @monster.attack%>　守備力：<%= @monster.defense%></li>
+  <li>Attack：<%= @monster.attack %></li>
+  <li>Defense：<%= @monster.defense %></li>
 </ul>
 <%= link_to("編集", "/monsters/#{@monster.id}/edit") %>
 <%= link_to("削除", "/monsters/#{@monster.id}/destroy", {method: "post"}) %>
