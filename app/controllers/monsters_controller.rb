@@ -24,14 +24,13 @@ class MonstersController < ApplicationController
 
   def update
     @monster = Monster.find_by(id: params[:id])
-    @monster.name = params[:name]
-    @monster.level = params[:level]
+    @monster.update_attributes(monster_params)
     @monster.save
     redirect_to("/monsters")
   end
 
   def destroy
-    @monster = Monster.find_by(id: params[:id])
+    @monster = Monster.find(params[:id])
     @monster.destroy
     redirect_to("/monsters")
 
@@ -40,7 +39,7 @@ class MonstersController < ApplicationController
   private
 
   def monster_params
-    params.require(:monster).permit(:name, :level)
+    params.require(:monster).permit(:name, :level, :attack, :defense)
   end
 
 end
