@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<%= form_tag("/monsters/#{@monster.id}/update") do %>
+<%= form_for monsters_path do %>
 
   <input name="name" class="monsters_name" value="<%= @monster.name %>">
   <input name="level" class="monsters_level" value="<%= @monster.level %>">
