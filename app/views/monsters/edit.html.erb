@@ -1,13 +1,26 @@
-<body>
+<%= form_for(@monster, url: monster_path(@monster)) do |form| %>
 
-<%= form_for monsters_path do %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
 
-  <input name="name" class="monsters_name" value="<%= @monster.name %>">
-  <input name="level" class="monsters_level" value="<%= @monster.level %>">
-  <input name="attack" class="monsters_attack" value="<%= @monster.attack %>">
-  <input name="defense" class="monsters_defense" value="<%= @monster.defense %>">
-  <input type="submit" value="保存">
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.text_field :level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attack %>
+    <%= form.text_field :attack %>
+  </div>
+  <div class="field">
+    <%= form.label :defense %>
+    <%= form.text_field :defense %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 
 <% end %>
-</body>
-</html>

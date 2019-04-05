@@ -1,11 +1,6 @@
-<body>
-
 <%= link_to("新規作成", "/monsters/new") %>
 <% @monsters.each do |monster| %>
   <ul>
     <li><%= link_to(monster.name, "/monsters/#{monster.id}") %> Level.<%= monster.level %></li>
   </ul>
 <% end %>
-
-</body>
-</html>
