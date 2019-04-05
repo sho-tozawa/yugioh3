@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   post 'monsters' => 'monsters#create'
   get 'monsters/:id/edit' => 'monsters#edit'
   post 'monsters/:id/edit' => 'monsters#update'
-  post 'monsters/:id/update' => 'monsters#update'
   post 'monsters/:id/destroy' => 'monsters#destroy'
 
   get 'monsters/:id' => 'monsters#show'
