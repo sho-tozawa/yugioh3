@@ -25,8 +25,13 @@ class MonstersController < ApplicationController
   def update
     @monster = Monster.find_by(id: params[:id])
     @monster.update_attributes(monster_params)
-    @monster.save
-    redirect_to("/monsters")
+    if @monster.save
+      redirect_to("/monsters", notice: "save成功")
+    else
+      flash.now[:notice] = "Some errors occured"
+      render :edit
+    end
+
   end
 
   def destroy
