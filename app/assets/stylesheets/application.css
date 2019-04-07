@@ -20,7 +20,6 @@
 }
 
 .header-logo {
-    float: left;
     font-size: 40px;
 }
 
@@ -32,7 +31,7 @@
 .header-list li {
     float: left;
     list-style: none;
-    padding: 20px 10px;
+    padding: 20px 20px;
 
 }
 
