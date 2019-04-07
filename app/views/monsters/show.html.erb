@@ -1,8 +1,10 @@
-<ul>
-  <li><%= @monster.name %></li>
-  <li>Level.<%= @monster.level %></li>
-  <li>Attack：<%= @monster.attack %></li>
-  <li>Defense：<%= @monster.defense %></li>
-</ul>
-<%= link_to("編集", edit_monster_path(@monster)) %>
-<%= link_to("削除", monster_path(@monster), method: :delete) %>
+<div class="monster-show">
+  <ul>
+    <li><%= @monster.name %></li>
+    <li>Level.<%= @monster.level %></li>
+    <li>Attack：<%= @monster.attack %></li>
+    <li>Defense：<%= @monster.defense %></li>
+  </ul>
+  <%= link_to("編集", edit_monster_path(@monster)) %>
+  <%= link_to("削除", monster_path(@monster), method: :delete) %>
+</div>
