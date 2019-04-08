@@ -14,15 +14,14 @@
   <div class="header">
     <div class="header-logo">青眼の白龍デッキ　モンスターのみ</div>
     <div class="header-list">
-        <ul>
-          <li><%= link_to("新規作成", new_monster_path(@monster)) %></li>
-          <li><%= link_to("モンスター一覧", monsters_path(@monster)) %></li>
-        </ul>
+      <ul>
+        <li><%= link_to("新規作成", new_monster_path(@monster)) %></li>
+        <li><%= link_to("モンスター一覧", monsters_path(@monster)) %></li>
+      </ul>
     </div>
   </div>
 </header>
 <% if flash[:notice] %>
-    
   <div class="alert alert-success">
         <%= flash[:notice] %>
   </div>
@@ -30,6 +29,8 @@
 <div class="main">
   <%= yield %>
 </div>
-
+<div class="footer">
+  <p>粉砕！玉砕！大喝采！！！</p>
+</div>
 </body>
 </html>

@@ -37,6 +37,13 @@
 }
 
 .main {
-    background-color: #bdf7f1;
+    background-color: #399ecc;
     font-size: 30px;
+}
+
+.footer {
+    font-size: 30px;
+    background-color: #ad272a;
+    color: white;
+    height: 60px;
 }
