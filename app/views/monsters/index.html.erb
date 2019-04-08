@@ -1,7 +1,7 @@
 <div class="monster-index">
   <% @monsters.each do |monster| %>
     <ul>
-      <li><%= link_to(monster.name, "/monsters/#{monster.id}") %> Level.<%= monster.level %></li>
+      <li><%= link_to(monster.name, "/monsters/#{monster.id}") %> Level.<%= "☆" * monster.level %></li>
     </ul>
   <% end %>
 </div>
