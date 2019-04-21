@@ -277,6 +277,30 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="bootsnap (vbundled(1.4.3)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="3" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/.github" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/.github" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.3/.github" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="builder (vbundled(3.2.3)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="3" />
@@ -322,6 +346,24 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="capybara (vbundled(3.16.2)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="3" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capybara-3.16.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capybara-3.16.2/spec" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capybara-3.16.2/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capybara-3.16.2/spec" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/capybara-3.16.2/spec" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="childprocess (vbundled(0.9.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="3" />
@@ -336,6 +378,30 @@
         </SOURCES>
         <excluded>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/childprocess-0.9.0/spec" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="chromedriver-helper (vbundled(2.1.1)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="3" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/concourse" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/concourse" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/spec" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/chromedriver-helper-2.1.1/concourse" />
         </excluded>
       </library>
     </orderEntry>
@@ -912,6 +978,15 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="rails (vbundled(5.2.3)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="3" />
+        </properties>
+        <CLASSES />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="rails-dom-testing (vbundled(2.0.3)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="3" />
@@ -1211,6 +1286,33 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="sqlite3 (vbundled(1.4.0)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="3" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/faq" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/rakelib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/faq" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/rakelib" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/ext" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/faq" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/test" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.4.0/rakelib" />
+        </excluded>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="thor (vbundled(0.20.3)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="3" />
@@ -1404,13 +1506,8 @@
         </excluded>
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.4.1, rbenv: 2.6.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.0.1, rbenv: 2.6.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="capybara (v3.15.0, rbenv: 2.6.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="chromedriver-helper (v2.1.0, rbenv: 2.6.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.1.4, rbenv: 2.6.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails (v5.2.2.1, rbenv: 2.6.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.13, rbenv: 2.6.2) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
