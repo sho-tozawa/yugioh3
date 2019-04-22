@@ -1,0 +1,7 @@
+<div class="magic-index">
+  <% @magics.each do |magic| %>
+    <ul>
+      <li><%= link_to(magic.name, "/magics/#{magic.id}") %></li>
+    </ul>
+  <% end %>
+</div>
