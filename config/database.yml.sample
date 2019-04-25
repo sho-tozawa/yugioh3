@@ -1,0 +1,25 @@
+common: &common
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+default_sqlite: &default_sqlite
+  <<: *common
+  adapter: sqlite3
+  timeout: 5000
+
+default_postgresql: &default_postgresql
+  <<: *common
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: postgres_sample_production
+
+development:
+  <<: *default_sqlite
+  database: db/development.sqlite3
+
+test:
+  <<: *default_sqlite
+  database: db/test.sqlite3
+
+production:
+  <<: *default_postgresql
