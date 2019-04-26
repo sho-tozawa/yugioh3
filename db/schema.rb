@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_121112) do
+ActiveRecord::Schema.define(version: 2019_04_26_115020) do
+
+  create_table "magics", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "effect", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "monsters", force: :cascade do |t|
     t.text "name"
