@@ -1,4 +1,5 @@
 class MagicsController < ApplicationController
+
   def index
     @magics = Magic.all
   end
@@ -43,7 +44,7 @@ class MagicsController < ApplicationController
   private
 
   def magic_params
-    params.require(:magic).permit(:name)
+    params.require(:magic).permit(:name, :effect)
   end
 
 end
