@@ -88,3 +88,12 @@ li {
     height: 60px;
     line-height: 60px;
 }
+
+.magic-effect textarea {
+    width: 500px;
+    height: 100px;
+}
+
+.name input {
+    width: 200px;
+}
