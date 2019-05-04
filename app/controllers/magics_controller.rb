@@ -14,7 +14,7 @@ class MagicsController < ApplicationController
   def create
     @magic = Magic.new(magic_params)
     @magic.save
-    redirect_to(magic_path)
+    redirect_to(magics_path)
   end
 
   def edit
