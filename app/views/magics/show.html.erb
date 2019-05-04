@@ -1,7 +1,7 @@
 <div class="magic-show">
   <ul>
     <li><%= @magic.name %></li>
-    <li>Effect：<%= @magic.effect %></li>
+    <div class="effect"><li>Effect：<%= @magic.effect %></li></div>
   </ul>
   <%= link_to("編集", edit_magic_path(@magic)) %>
   <%= link_to("削除", magic_path(@magic), method: :delete) %>
