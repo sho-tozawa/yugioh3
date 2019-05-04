@@ -12,11 +12,13 @@
 <body>
 <header>
   <div class="header">
-    <div class="header-logo">青眼の白龍デッキ　モンスターのみ</div>
+    <div class="header-logo">青眼の白龍デッキ</div>
     <div class="header-list">
       <ul>
-        <li><%= link_to("新規作成", new_monster_path(@monster)) %></li>
+        <li><%= link_to("モンスター新規作成", new_monster_path(@monster)) %></li>
         <li><%= link_to("モンスター一覧", monsters_path(@monster)) %></li>
+        <li><%= link_to("魔法新規作成", new_magic_path(@magic)) %></li>
+        <li><%= link_to("魔法一覧", magics_path(@magic)) %></li>
       </ul>
     </div>
   </div>
