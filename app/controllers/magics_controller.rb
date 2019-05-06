@@ -14,8 +14,12 @@ class MagicsController < ApplicationController
 
   def create
     @magic = Magic.new(magic_params)
-    @magic.save
-    redirect_to(magics_path)
+    if @magic.save
+      redirect_to("/magics", notice: "save成功")
+    else
+      flash.now[:notice] = "Some errors occured"
+      render :new
+    end
   end
 
   def edit
