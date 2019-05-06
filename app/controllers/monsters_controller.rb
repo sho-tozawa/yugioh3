@@ -14,8 +14,12 @@ class MonstersController < ApplicationController
 
   def create
     @monster = Monster.new(monster_params)
-    @monster.save
-    redirect_to(monsters_path)
+    if @monster.save
+      redirect_to("/monsters", notice: "save成功")
+    else
+      flash.now[:notice] = "Some errors occured"
+      render :new
+    end
   end
 
   def edit
