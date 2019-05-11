@@ -1,14 +1,22 @@
 class Monster < ApplicationRecord
+
+  MIN_LEVEL = 1.freeze
+  MAX_LEVEL = 12.freeze
+
   validates :name, presence: true
   validates :level, presence: true, numericality: true
   validates :attack, presence: true, numericality: true
   validates :defense, presence: true, numericality: true
 
-  def self.search(search) #self.でクラスメソッドとしている
-    if search # Controllerから渡されたパラメータが!= nilの場合は、titleカラムを部分一致検索
-      Monster.where(['name LIKE ?', "%#{search}%"])
+  #self.でクラスメソッドとしている
+  def self.search(search)
+    # 検索パラメータが存在する場合に検索処理を実行する
+    if search
+      Monster.where('name LIKE ?', "%#{search[:name]}%")
+             .where(level: search[:level])
     else
-      Monster.all #全て表示。
+      #全て表示
+      Monster.all
     end
   end
 end
