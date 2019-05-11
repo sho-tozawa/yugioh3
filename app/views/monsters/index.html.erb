@@ -6,7 +6,7 @@
     </div>
     <div>
       <%= f.label :level %>
-      <%= f.select :level, options_for_select({ "☆" => 1, "☆☆" => 2, "☆☆☆" => 3, "☆☆☆☆" => 4 }) %>
+      <%= f.select :level, options_for_select((Monster::MIN_LEVEL..Monster::MAX_LEVEL).to_a) %>
     </div>
     <div>
       <%= f.submit :search %>

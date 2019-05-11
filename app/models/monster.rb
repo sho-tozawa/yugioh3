@@ -1,4 +1,8 @@
 class Monster < ApplicationRecord
+
+  MIN_LEVEL = 1.freeze
+  MAX_LEVEL = 12.freeze
+
   validates :name, presence: true
   validates :level, presence: true, numericality: true
   validates :attack, presence: true, numericality: true
