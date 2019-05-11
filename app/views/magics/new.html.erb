@@ -1,0 +1,17 @@
+<%= form_with(model: @magic, local: true) do |form| %>
+
+  <div class="name">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="magic-effect">
+    <%= form.label :effect %>
+    <%= form.text_area :effect %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

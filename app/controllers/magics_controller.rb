@@ -1,6 +1,7 @@
 class MagicsController < ApplicationController
+
   def index
-    @magics = Magic.all
+    @magics = Magic.page(params[:page]).per(5)
   end
 
   def show
@@ -13,8 +14,12 @@ class MagicsController < ApplicationController
 
   def create
     @magic = Magic.new(magic_params)
-    @magic.save
-    redirect_to(magic_path)
+    if @magic.save
+      redirect_to("/magics", notice: "save成功")
+    else
+      flash.now[:notice] = "Some errors occured"
+      render :new
+    end
   end
 
   def edit
@@ -43,7 +48,7 @@ class MagicsController < ApplicationController
   private
 
   def magic_params
-    params.require(:magic).permit(:name)
+    params.require(:magic).permit(:name, :effect)
   end
 
 end
