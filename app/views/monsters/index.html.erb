@@ -1,5 +1,16 @@
+<p>モンスター検索</p>
+<%= form_tag(monsters_path, :method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+
+<%= form_tag(monsters_path, method: "get") do %>
+  <%= select_tag "level", options_for_select([["☆", "1"], ["☆☆", "2"], ["☆☆☆", "3"], ["☆☆☆☆", "4"]]) %>
+  <%= submit_tag 'Search', :level => nil %>
+<% end %>
+
 <div class="monster-index">
-  <% @monsters.each do |monster| %>
+  <% @monsters.each do |monster|   %>
     <ul>
       <li><%= link_to(monster.name, "/monsters/#{monster.id}") %> Level.<%= "☆" * monster.level %></li>
     </ul>
