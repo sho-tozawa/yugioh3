@@ -4,11 +4,14 @@ class Monster < ApplicationRecord
   validates :attack, presence: true, numericality: true
   validates :defense, presence: true, numericality: true
 
-  def self.search(search) #self.でクラスメソッドとしている
-    if search # Controllerから渡されたパラメータが!= nilの場合は、titleカラムを部分一致検索
-      Monster.where(['name LIKE ?', "%#{search}%"])
+  #self.でクラスメソッドとしている
+  def self.search(search)
+    # 検索パラメータが存在する場合に検索処理を実行する
+    if search
+      Monster.where('name LIKE ?', "%#{search[:name]}%")
     else
-      Monster.all #全て表示。
+      #全て表示
+      Monster.all
     end
   end
 end
