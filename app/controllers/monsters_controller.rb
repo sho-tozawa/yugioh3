@@ -44,6 +44,7 @@ class MonstersController < ApplicationController
     redirect_to("/monsters")
   end
 
+
   def search
     @monsters = Monster.search(params[:search])
   end
