@@ -1,7 +1,7 @@
 class MonstersController < ApplicationController
 
   def index
-    @monsters = Monster.search(params[:search]).page(1).per(10)
+    @monsters = Monster.page(params[:page]).per(10)
   end
 
   def show
@@ -42,10 +42,7 @@ class MonstersController < ApplicationController
     @monster = Monster.find(params[:id])
     @monster.destroy
     redirect_to("/monsters")
-  end
 
-  def search
-    @monsters = Monster.search(params[:search])
   end
 
   private
