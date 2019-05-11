@@ -1,7 +1,7 @@
 class MagicsController < ApplicationController
 
   def index
-    @magics = Magic.page(params[:page]).per(5)
+    @magics = Magic.search(params[:search]).page(1).per(10)
   end
 
   def show
