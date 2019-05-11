@@ -9,6 +9,7 @@ class Monster < ApplicationRecord
     # 検索パラメータが存在する場合に検索処理を実行する
     if search
       Monster.where('name LIKE ?', "%#{search[:name]}%")
+             .where(level: search[:level])
     else
       #全て表示
       Monster.all

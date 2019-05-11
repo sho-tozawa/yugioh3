@@ -5,6 +5,10 @@
       <%= f.text_field :name %>
     </div>
     <div>
+      <%= f.label :level %>
+      <%= f.select :level, options_for_select({ "☆" => 1, "☆☆" => 2, "☆☆☆" => 3, "☆☆☆☆" => 4 }) %>
+    </div>
+    <div>
       <%= f.submit :search %>
     </div>
   <% end %>
