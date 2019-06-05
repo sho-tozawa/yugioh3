@@ -1,5 +1,4 @@
 class MonstersController < ApplicationController
-
   def index
     @monsters = Monster.search(params[:search]).page(1).per(10)
   end
@@ -35,7 +34,6 @@ class MonstersController < ApplicationController
       flash.now[:notice] = "Some errors occured"
       render :edit
     end
-
   end
 
   def destroy
@@ -54,5 +52,4 @@ class MonstersController < ApplicationController
   def monster_params
     params.require(:monster).permit(:name, :level, :attack, :defense)
   end
-
 end

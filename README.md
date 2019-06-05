@@ -24,4 +24,14 @@ rails db:migrate
 
 * Deployment instructions
 
-* ...
+## コミット前にやること
+rubocopのチェックをして違反している場合は修正する
+
+### rubocopのチェック
+```
+bundle exec rubocop
+```
+
+### 禁止事項
+- `--auto-gen-config`
+- `--auto-correct`
