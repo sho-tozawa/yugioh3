@@ -1,5 +1,4 @@
 class MagicsController < ApplicationController
-
   def index
     @magics = Magic.search(params[:search]).page(1).per(10)
   end
@@ -35,14 +34,12 @@ class MagicsController < ApplicationController
       flash.now[:notice] = "Some errors occured"
       render :edit
     end
-
   end
 
   def destroy
     @magic = Magic.find(params[:id])
     @magic.destroy
     redirect_to("/magics")
-
   end
 
   private
@@ -50,5 +47,4 @@ class MagicsController < ApplicationController
   def magic_params
     params.require(:magic).permit(:name, :effect)
   end
-
 end

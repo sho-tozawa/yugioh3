@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_115020) do
-
+ActiveRecord::Schema.define(version: 20_190_426_115_020) do
   create_table "magics", force: :cascade do |t|
     t.string "name", null: false
     t.text "effect", null: false
@@ -27,5 +26,4 @@ ActiveRecord::Schema.define(version: 2019_04_26_115020) do
     t.integer "attack"
     t.integer "defense"
   end
-
 end
