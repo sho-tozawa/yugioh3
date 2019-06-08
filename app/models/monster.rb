@@ -12,12 +12,12 @@ class Monster < ApplicationRecord
       .attack_to(search_params[:attack_to])
       .defense_from(search_params[:defense_from])
       .defense_to(search_params[:defense_to])
-      .monster_level_is(search_params[:monster_level])
+      .level_is(search_params[:level])
   }
   scope :name_like, ->(name) { where('name LIKE ?', "%#{name}%") if name.present? }
   scope :attack_from, ->(from) { where('? <= attack', from) if from.present? }
   scope :attack_to, ->(to) { where('attack <= ?', to) if to.present? }
   scope :defense_from, ->(from) { where('? <= defense', from) if from.present? }
   scope :defense_to, ->(to) { where('defense <= ?', to) if to.present? }
-  scope :monster_level_is, ->(monster_level) { where(monster_level: monster_level) if monster_level.present? }
+  scope :level_is, ->(level) { where(level: level) if level.present? }
 end

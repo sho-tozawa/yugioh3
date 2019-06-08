@@ -7,7 +7,7 @@
 
     <div class="field">
       <p>レベル</p>
-      <%= f.collection_select(:monster_level, Monster.all, :id, :name, selected: @search_params[:monster_level], include_blank: t('helpers.select.include_blank')) %>
+      <%= f.collection_select(:level, Monster.all, :level, :level, selected: @search_params[:level], include_blank:true) %>
     </div>
 
     <div class="field">
@@ -35,6 +35,5 @@
       <li><%= link_to(monster.name, "/monsters/#{monster.id}") %> Level.<%= "☆" * monster.level %></li>
     </ul>
   <% end %>
-</div>
-</div>
 <%= paginate @monsters %>
+</div>
