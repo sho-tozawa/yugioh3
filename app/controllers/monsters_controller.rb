@@ -1,6 +1,7 @@
 class MonstersController < ApplicationController
   def index
-    @monsters = Monster.search(params[:search]).page(1).per(10)
+    @search_params = monster_search_params
+    @monsters = Monster.search(@search_params).page(params[:page]).per(10)
   end
 
   def show
@@ -48,7 +49,7 @@ class MonstersController < ApplicationController
 
   private
 
-  def monster_params
-    params.require(:monster).permit(:name, :level, :attack, :defense)
+  def monster_search_params
+    params.fetch(:search, {}).permit(:name, :level, :attack_from, :attack_to, :defense_from, :defense_to)
   end
 end

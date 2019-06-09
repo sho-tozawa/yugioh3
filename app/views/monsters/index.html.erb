@@ -1,19 +1,39 @@
-<p>モンスター検索</p>
-<%= form_tag(monsters_path, :method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name => nil %>
-<% end %>
+<div class="search-form">
+  <p>モンスター名</p>
+  <%= form_with(model: @search_params, scope: :search, url: monsters_path, method: :get, local: true) do |f| %>
+    <div class="field">
+      <%= f.text_field :name, value: @search_params[:name] %>
+    </div>
 
-<%= form_tag(monsters_path, method: "get") do %>
-  <%= select_tag "level", options_for_select([["☆", "1"], ["☆☆", "2"], ["☆☆☆", "3"], ["☆☆☆☆", "4"]]) %>
-  <%= submit_tag 'Search', :level => nil %>
-<% end %>
+    <div class="field">
+      <p>レベル</p>
+      <%= f.select :level, options_for_select((Monster::MIN_LEVEL..Monster::MAX_LEVEL).to_a), include_blank: true %>
+    </div>
+
+    <div class="field">
+      <p>攻撃力</p>
+      <%= f.text_field :attack_from, value: @search_params[:attack_from] %>
+      ~ <%= f.text_field :attack_to, value: @search_params[:attack_from] %>
+    </div>
+
+    <div class="field">
+      <p>守備力</p>
+      <%= f.text_field :defense_from, value: @search_params[:defense_from] %>
+      ~ <%= f.text_field :defense_to, value: @search_params[:defense_to] %>
+    </div>
+
+    <div class="actions">
+      <p>検索</p>
+      <%= f.submit(:search) %>
+    </div>
+  <% end %>
+</div>
 
 <div class="monster-index">
-  <% @monsters.each do |monster|   %>
+  <% @monsters.each do |monster| %>
     <ul>
       <li><%= link_to(monster.name, "/monsters/#{monster.id}") %> Level.<%= "☆" * monster.level %></li>
     </ul>
   <% end %>
-</div>
 <%= paginate @monsters %>
+</div>
