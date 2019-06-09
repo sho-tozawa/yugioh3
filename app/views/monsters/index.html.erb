@@ -7,7 +7,7 @@
 
     <div class="field">
       <p>レベル</p>
-      <%= f.collection_select(:level, Monster.all, :level, :level, selected: @search_params[:level], include_blank:true) %>
+      <%= f.select :level, options_for_select((Monster::MIN_LEVEL..Monster::MAX_LEVEL).to_a), include_blank: true %>
     </div>
 
     <div class="field">

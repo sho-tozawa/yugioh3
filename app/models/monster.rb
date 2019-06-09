@@ -4,6 +4,9 @@ class Monster < ApplicationRecord
   validates :attack, presence: true, numericality: true
   validates :defense, presence: true, numericality: true
 
+  MIN_LEVEL = 1
+  MAX_LEVEL = 12
+
   scope :search, lambda { |search_params|
     return if search_params.blank?
 
