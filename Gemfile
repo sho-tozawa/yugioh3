@@ -70,4 +70,4 @@ group :production do
 end
 
 
-gem 'kaminari', '~> 0.17.0'
+gem 'kaminari', '~> 1.2.1'
